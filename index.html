@@ -1,8 +1,10 @@
-<html lang="ar" dir="rtl"><head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>خدمات نقل العفش - خصومات حصرية في جميع أنحاء القاهرة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -214,7 +216,6 @@
             transition: all 0.7s ease;
         }
         
-        /* Scroll Progress Bar */
         .progress-bar {
             position: fixed;
             top: 0;
@@ -226,7 +227,6 @@
             transition: width 0.2s ease;
         }
         
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -244,7 +244,6 @@
             background: linear-gradient(var(--secondary-color), var(--accent-color));
         }
         
-        /* Animated Background */
         .animated-bg {
             position: absolute;
             top: 0;
@@ -340,52 +339,6 @@
             color: white;
         }
         
-        /* Floating Call Button */
-        .floating-call-btn {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #38a169, #2f855a);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        .floating-call-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-        }
-        
-        .floating-call-btn .tooltip {
-            position: absolute;
-            right: 70px;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            opacity: 0;
-            transition: all 0.3s ease;
-            pointer-events: none;
-            white-space: nowrap;
-        }
-        
-        .floating-call-btn:hover .tooltip {
-            opacity: 1;
-            right: 75px;
-        }
-        
-        /* تعديل أزرار Hero Section للموبايل */
         @media (max-width: 640px) {
             .hero-buttons {
                 display: flex;
@@ -401,418 +354,72 @@
             }
         }
 
-        /* Call Confirmation Modal Styles */
+        /* Styles for the new FAB */
+        .floating-call-button-container {
+            position: fixed;
+            bottom: 30px; /* Adjusted to match old FAB */
+            left: 30px;   /* Adjusted to match old FAB */
+            z-index: 1000;
+        }
+
+        .floating-call-button {
+            background-color: var(--accent-color); /* Green */
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            animation: pulse 2s infinite; /* Added pulse animation */
+        }
+
+        .floating-call-button:hover {
+            background-color: #2f855a; /* Darker green */
+            transform: scale(1.1);
+        }
+
+        .floating-call-button svg {
+            width: 24px; 
+            height: 24px;
+        }
+        
+        /* General Modal Styles */
         .call-modal-overlay {
-            font-family: 'Tajawal', sans-serif;
+            position: fixed;
+            inset: 0; /* top, right, bottom, left = 0 */
+            background-color: rgba(0, 0, 0, 0.65); /* Slightly darker overlay */
+            display: flex; /* Used with 'hidden' class for toggling */
+            align-items: center;
+            justify-content: center;
+            z-index: 1001; /* Ensure it's above other content */
+            font-family: 'Tajawal', sans-serif; /* From user's CSS */
+            /* 'hidden' class from Tailwind will manage visibility */
         }
-        .call-modal-content {
-            font-family: 'Tajawal', sans-serif;
-        }
-        .call-modal-content label {
-            font-family: 'Tajawal', sans-serif;
-        }
+
+        /* .call-modal-content styling is primarily handled by Tailwind classes in the HTML */
+        /* User's provided font styles for modal elements */
+        .call-modal-content label,
         .call-modal-content button {
              font-family: 'Tajawal', sans-serif;
         }
 
     </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.bottom-0{bottom:0px}.bottom-8{bottom:2rem}.left-0{left:0px}.left-1\/2{left:50%}.right-0{right:0px}.top-0{top:0px}.top-1\/2{top:50%}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.ml-2{margin-left:0.5rem}.mr-2{margin-right:0.5rem}.mt-12{margin-top:3rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.h-16{height:4rem}.h-3{height:0.75rem}.h-48{height:12rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-80{height:20rem}.h-96{height:24rem}.h-\[85vh\]{height:85vh}.h-full{height:100%}.w-16{width:4rem}.w-3{width:0.75rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-8{width:2rem}.w-80{width:20rem}.w-96{width:24rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-md{max-width:28rem}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-1\/3{--tw-translate-x:33.333333%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-1\/3{--tw-translate-y:33.333333%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-reverse > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:1}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-gray-400{--tw-border-opacity:1;border-color:rgb(156 163 175 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-blue-700{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.bg-blue-800{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-50{--tw-gradient-from:#eff6ff var(--tw-gradient-from-position);--tw-gradient-to:rgb(239 246 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-800{--tw-gradient-from:#1e40af var(--tw-gradient-from-position);--tw-gradient-to:rgb(30 64 175 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-blue-100{--tw-gradient-to:#dbeafe var(--tw-gradient-to-position)}.to-blue-600{--tw-gradient-to:#2563eb var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.text-center{text-align:center}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.leading-tight{line-height:1.25}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-10{opacity:0.1}.opacity-20{opacity:0.2}.opacity-30{opacity:0.3}.opacity-90{opacity:0.9}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.blur-2xl{--tw-blur:blur(40px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.disabled\:opacity-50:disabled{opacity:0.5}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.hover\:text-blue-800:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-gray-200:hover{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.group:hover .group-hover\:translate-x-\[-5px\]{--tw-translate-x:-5px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:mb-0{margin-bottom:0px}.md\:inline{display:inline}.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:px-8{padding-left:2rem;padding-right:2rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:text-6xl{font-size:3.75rem;line-height:1}}</style><style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 2147483647;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.immersive-translate-attach-loading::after {
-  content: " ";
-
-  --loading-color: #f78fb6;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  display: block;
-  margin: 12px auto;
-  position: relative;
-  color: white;
-  left: -100px;
-  box-sizing: border-box;
-  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-2000%, -50%);
-  z-index: 100;
-}
-
-.immersive-translate-loading-spinner {
-  vertical-align: middle !important;
-  width: 10px !important;
-  height: 10px !important;
-  display: inline-block !important;
-  margin: 0 4px !important;
-  border: 2px rgba(221, 244, 255, 0.6) solid !important;
-  border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
-  border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
-  border-radius: 50% !important;
-  padding: 0 !important;
-  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
-  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
-}
-
-@-webkit-keyframes immersive-translate-loading-animation {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(359deg);
-  }
-}
-
-@keyframes immersive-translate-loading-animation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-.immersive-translate-input-loading {
-  --loading-color: #f78fb6;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  display: block;
-  margin: 12px auto;
-  position: relative;
-  color: white;
-  left: -100px;
-  box-sizing: border-box;
-  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
-}
-
-@keyframes immersiveTranslateShadowRolling {
-  0% {
-    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0),
-      0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
-  }
-
-  12% {
-    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0),
-      0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
-  }
-
-  25% {
-    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color),
-      0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
-  }
-
-  36% {
-    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color),
-      100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
-  }
-
-  50% {
-    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color),
-      110px 0 var(--loading-color), 100px 0 var(--loading-color);
-  }
-
-  62% {
-    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color),
-      120px 0 var(--loading-color), 110px 0 var(--loading-color);
-  }
-
-  75% {
-    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
-      130px 0 var(--loading-color), 120px 0 var(--loading-color);
-  }
-
-  87% {
-    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
-      200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
-  }
-
-  100% {
-    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
-      200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
-  }
-}
-
-.immersive-translate-toast {
-  display: flex;
-  position: fixed;
-  z-index: 2147483647;
-  left: 0;
-  right: 0;
-  top: 1%;
-  width: fit-content;
-  padding: 12px 20px;
-  margin: auto;
-  overflow: auto;
-  background: #fef6f9;
-  box-shadow: 0px 4px 10px 0px rgba(0, 10, 30, 0.06);
-  font-size: 15px;
-  border-radius: 8px;
-  color: #333;
-}
-
-.immersive-translate-toast-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.immersive-translate-toast-hidden {
-  margin: 0 20px 0 72px;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.immersive-translate-toast-close {
-  color: #666666;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 0 10px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  .immersive-translate-toast {
-    top: 0;
-    padding: 12px 0px 0 10px;
-  }
-  .immersive-translate-toast-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .immersive-translate-toast-hidden {
-    margin: 10px auto;
-  }
-}
-
-.immersive-translate-modal {
-  display: none;
-  position: fixed;
-  z-index: 2147483647;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  font-size: 15px;
-}
-
-.immersive-translate-modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 40px 24px 24px;
-  border: 1px solid #888;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 270px;
-  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
-    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  position: relative;
-}
-
-@media screen and (max-width: 768px) {
-  .immersive-translate-modal-content {
-    margin: 50% auto !important;
-  }
-}
-
-.immersive-translate-modal .immersive-translate-modal-content-in-input {
-  max-width: 500px;
-}
-.immersive-translate-modal-content-in-input .immersive-translate-modal-body {
-  text-align: left;
-  max-height: unset;
-}
-
-.immersive-translate-modal-title {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #333333;
-}
-
-.immersive-translate-modal-body {
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333333;
-  word-break: break-all;
-  margin-top: 24px;
-}
-
-@media screen and (max-width: 768px) {
-  .immersive-translate-modal-body {
-    max-height: 250px;
-    overflow-y: auto;
-  }
-}
-
-.immersive-translate-close {
-  color: #666666;
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.immersive-translate-close:hover,
-.immersive-translate-close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.immersive-translate-modal-footer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 24px;
-}
-
-.immersive-translate-btn {
-  width: fit-content;
-  color: #fff;
-  background-color: #ea4c89;
-  border: none;
-  font-size: 16px;
-  margin: 0 8px;
-  padding: 9px 30px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.immersive-translate-btn:hover {
-  background-color: #f082ac;
-}
-.immersive-translate-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-.immersive-translate-btn:disabled:hover {
-  background-color: #ea4c89;
-}
-
-.immersive-translate-cancel-btn {
-  /* gray color */
-  background-color: rgb(89, 107, 120);
-}
-
-.immersive-translate-cancel-btn:hover {
-  background-color: hsl(205, 20%, 32%);
-}
-
-.immersive-translate-action-btn {
-  background-color: transparent;
-  color: #ea4c89;
-  border: 1px solid #ea4c89;
-}
-
-.immersive-translate-btn svg {
-  margin-right: 5px;
-}
-
-.immersive-translate-link {
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-drag: none;
-  text-decoration: none;
-  color: #007bff;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-}
-
-.immersive-translate-primary-link {
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-drag: none;
-  text-decoration: none;
-  color: #ea4c89;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-}
-
-.immersive-translate-modal input[type="radio"] {
-  margin: 0 6px;
-  cursor: pointer;
-}
-
-.immersive-translate-modal label {
-  cursor: pointer;
-}
-
-.immersive-translate-close-action {
-  position: absolute;
-  top: 2px;
-  right: 0px;
-  cursor: pointer;
-}
-
-.imt-image-status {
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 16px !important;
-}
-.imt-image-status img,
-.imt-image-status svg,
-.imt-img-loading {
-  width: 28px !important;
-  height: 28px !important;
-  margin: 0 0 8px 0 !important;
-  min-height: 28px !important;
-  min-width: 28px !important;
-  position: relative !important;
-}
-.imt-img-loading {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAtFBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////oK74hAAAAPHRSTlMABBMIDyQXHwyBfFdDMSw+OjXCb+5RG51IvV/k0rOqlGRM6KKMhdvNyZBz9MaupmxpWyj437iYd/yJVNZeuUC7AAACt0lEQVRIx53T2XKiUBCA4QYOiyCbiAsuuGBcYtxiYtT3f6/pbqoYHVFO5r+iivpo6DpAWYpqeoFfr9f90DsYAuRSWkFnPO50OgR9PwiCUFcl2GEcx+N/YBh6pvKaefHlUgZd1zVe0NbYcQjGBfzrPE8Xz8aF+71D8gG6DHFPpc4a7xFiCDuhaWgKgGIJQ3d5IMGDrpS4S5KgpIm+en9f6PlAhKby4JwEIxlYJV9h5k5nee9GoxHJ2IDSNB0dwdad1NAxDJ/uXDHYmebdk4PdbkS58CIVHdYSUHTYYRWOJblWSyu2lmy3KNFVJNBhxcuGW4YBVCbYGRZwIooipHsNqjM4FbgOQqQqSKQQU9V8xmi1QlgHqQQ6DDBvRUVCDirs+EzGDGOQTCATgtYTnbCVLgsVgRE0T1QE0qHCFAht2z6dLvJQs3Lo2FQoDxWNUiBhaP4eRgwNkI+dAjVOA/kUrIDwf3CG8NfNOE0eiFotSuo+rBiq8tD9oY4Qzc6YJw99hl1wzpQvD7ef2M8QgnOGJfJw+EltQc+oX2yn907QB22WZcvlUpd143dqQu+8pCJZuGE4xCuPXJqqcs5sNpsI93Rmzym1k4Npk+oD1SH3/a3LOK/JpUBpWfqNySxWzCfNCUITuDG5dtuphrUJ1myeIE9bIsPiKrfqTai5WZxbhtNphYx6GEIHihyGFTI69lje/rxajdh0s0msZ0zYxyPLhYCb1CyHm9Qsd2H37Y3lugVwL9kNh8Ot8cha6fUNQ8nuXi5z9/ExsAO4zQrb/ev1yrCB7lGyQzgYDGuxq1toDN/JGvN+HyWNHKB7zEoK+PX11e12G431erGYzwmytAWU56fkMHY5JJnDRR2eZji3AwtIcrEV8Cojat/BdQ7XOwGV1e1hDjGGjXbdArm8uJZtCH5MbcctVX8A1WpqumJHwckAAAAASUVORK5CYII=");
-  background-size: 28px 28px;
-  animation: image-loading-rotate 1s linear infinite !important;
-}
-
-.imt-image-status span {
-  color: var(--bg-2, #fff) !important;
-  font-size: 14px !important;
-  line-height: 14px !important;
-  font-weight: 500 !important;
-  font-family: "PingFang SC", Arial, sans-serif !important;
-}
-
-@keyframes image-loading-rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-</style></head>
+</head>
 <body class="bg-gray-50 text-gray-800">
     <div class="progress-bar"></div>
     
-    <a href="#" class="floating-call-btn open-call-modal" data-phone="01096296216">
-        <i class="fas fa-phone-alt"></i>
-        <span class="tooltip">اضغط هنا لطلب الخدمة</span>
-    </a>
+    <div class="floating-call-button-container">
+        <button id="fab" class="floating-call-button" aria-label="اتصل بنا">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+        </button>
+    </div>
 
     <div class="bg-blue-800 text-white py-2 px-4 md:px-8">
         <div class="container mx-auto flex justify-between items-center">
@@ -865,26 +472,7 @@
 
     <section class="hero-bg h-[85vh] flex items-center relative">
         <div class="animated-bg">
-            <span style="--i:11;"></span>
-            <span style="--i:12;"></span>
-            <span style="--i:24;"></span>
-            <span style="--i:10;"></span>
-            <span style="--i:14;"></span>
-            <span style="--i:23;"></span>
-            <span style="--i:18;"></span>
-            <span style="--i:16;"></span>
-            <span style="--i:19;"></span>
-            <span style="--i:20;"></span>
-            <span style="--i:22;"></span>
-            <span style="--i:25;"></span>
-            <span style="--i:18;"></span>
-            <span style="--i:21;"></span>
-            <span style="--i:15;"></span>
-            <span style="--i:13;"></span>
-            <span style="--i:26;"></span>
-            <span style="--i:17;"></span>
-            <span style="--i:13;"></span>
-            <span style="--i:28;"></span>
+            <span style="--i:11;"></span><span style="--i:12;"></span><span style="--i:24;"></span><span style="--i:10;"></span><span style="--i:14;"></span><span style="--i:23;"></span><span style="--i:18;"></span><span style="--i:16;"></span><span style="--i:19;"></span><span style="--i:20;"></span><span style="--i:22;"></span><span style="--i:25;"></span><span style="--i:18;"></span><span style="--i:21;"></span><span style="--i:15;"></span><span style="--i:13;"></span><span style="--i:26;"></span><span style="--i:17;"></span><span style="--i:13;"></span><span style="--i:28;"></span>
         </div>
         <div class="container mx-auto px-4 md:px-8 hero-content">
             <div class="max-w-2xl animate__animated animate__fadeInUp">
@@ -921,12 +509,7 @@
                 </a>
             </div>
         </div>
-        
-        <div class="absolute top-0 left-0 w-full h-full">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute top-0 left-0 opacity-10">
-                <path fill="#ffffff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-            </svg>
-        </div>
+        <div class="absolute top-0 left-0 w-full h-full"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute top-0 left-0 opacity-10"><path fill="#ffffff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg></div>
     </section>
 
     <section id="locations" class="py-20 bg-white relative overflow-hidden">
@@ -935,220 +518,69 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">مناطق <span class="text-blue-700">الخدمة</span></h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">نقدم خدمات نقل العفش في جميع أنحاء القاهرة الكبرى بخصومات حصرية تصل إلى 25%</p>
             </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/01-small.jpg" alt="مدينة نصر" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">خصم 25% نقل عفش مدينة نصر</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش آمن وسريع في مدينة نصر بخصم 25% لفترة محدودة - فريق محترف وضمان سلامة المنقولات</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/01-small.jpg" alt="مدينة نصر" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">خصم 25% نقل عفش مدينة نصر</h3><p class="text-gray-600 mb-4">نقل عفش آمن وسريع في مدينة نصر بخصم 25% لفترة محدودة - فريق محترف وضمان سلامة المنقولات</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/03-small.jpg" alt="مصر الجديدة" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">نقل عفش مصر الجديدة بخصم</h3>
-                        <p class="text-gray-600 mb-4">خدمات نقل متميزة في مصر الجديدة مع خصم خاص - فك وتركيب وتغليف بأيدي محترفة</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/03-small.jpg" alt="مصر الجديدة" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">نقل عفش مصر الجديدة بخصم</h3><p class="text-gray-600 mb-4">خدمات نقل متميزة في مصر الجديدة مع خصم خاص - فك وتركيب وتغليف بأيدي محترفة</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/05-small.jpg" alt="التجمع" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">خصم خاص نقل عفش التجمع</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش التجمع الخامس بخصم 25% - سيارات مجهزة وعمالة مدربة لنقل آمن وسريع</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/05-small.jpg" alt="التجمع" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">خصم خاص نقل عفش التجمع</h3><p class="text-gray-600 mb-4">نقل عفش التجمع الخامس بخصم 25% - سيارات مجهزة وعمالة مدربة لنقل آمن وسريع</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/09-small.jpg" alt="مدينتي" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">وفر 25% على نقل مدينتي</h3>
-                        <p class="text-gray-600 mb-4">خدمات نقل عفش متكاملة في مدينتي بخصم 25% - فك وتركيب وتغليف ونقل بأعلى معايير الجودة</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/09-small.jpg" alt="مدينتي" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">وفر 25% على نقل مدينتي</h3><p class="text-gray-600 mb-4">خدمات نقل عفش متكاملة في مدينتي بخصم 25% - فك وتركيب وتغليف ونقل بأعلى معايير الجودة</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
-                <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1-1.jpg" alt="الرحاب" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">خصم سريع لنقل عفش الرحاب</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش الرحاب بخصم 25% - خدمة سريعة وآمنة مع ضمان سلامة المنقولات</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1-1.jpg" alt="الرحاب" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">خصم سريع لنقل عفش الرحاب</h3><p class="text-gray-600 mb-4">نقل عفش الرحاب بخصم 25% - خدمة سريعة وآمنة مع ضمان سلامة المنقولات</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1.jpg" alt="الشيخ زايد" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">خصومات نقل عفش الشيخ زايد</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش الشيخ زايد بخصم 25% - خدمة متكاملة من الفك والتغليف حتى التركيب</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1.jpg" alt="الشيخ زايد" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">خصومات نقل عفش الشيخ زايد</h3><p class="text-gray-600 mb-4">نقل عفش الشيخ زايد بخصم 25% - خدمة متكاملة من الفك والتغليف حتى التركيب</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/10.jpg" alt="المعادي" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">خصم 25% على عفش المعادي</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش المعادي بخصم 25% - فريق محترف وسيارات مجهزة لنقل آمن وسريع</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/10.jpg" alt="المعادي" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">خصم 25% على عفش المعادي</h3><p class="text-gray-600 mb-4">نقل عفش المعادي بخصم 25% - فريق محترف وسيارات مجهزة لنقل آمن وسريع</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/11219a16-e57e-4f71-a9bd-b803104ea77f.jpg" alt="حلوان" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">نقل عفش حلوان بسعر أقل</h3>
-                        <p class="text-gray-600 mb-4">خدمات نقل عفش في حلوان بأسعار تنافسية وخصم 25% - جودة عالية وسرعة في التنفيذ</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/11219a16-e57e-4f71-a9bd-b803104ea77f.jpg" alt="حلوان" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">نقل عفش حلوان بسعر أقل</h3><p class="text-gray-600 mb-4">خدمات نقل عفش في حلوان بأسعار تنافسية وخصم 25% - جودة عالية وسرعة في التنفيذ</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/117361235_171114901222055_1323009311216674629_n.jpg" alt="المهندسين" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">وفر بنقل عفش المهندسين</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش المهندسين بخصم 25% - خدمة احترافية متكاملة مع ضمان سلامة المنقولات</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/117361235_171114901222055_1323009311216674629_n.jpg" alt="المهندسين" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">وفر بنقل عفش المهندسين</h3><p class="text-gray-600 mb-4">نقل عفش المهندسين بخصم 25% - خدمة احترافية متكاملة مع ضمان سلامة المنقولات</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/119216252_1745091905639318_5231920126870389088_n.jpg" alt="الدقي" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">عرض خاص على عفش الدقي</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش الدقي بخصم 25% - خدمة متميزة من الفك والتغليف حتى التركيب</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/119216252_1745091905639318_5231920126870389088_n.jpg" alt="الدقي" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">عرض خاص على عفش الدقي</h3><p class="text-gray-600 mb-4">نقل عفش الدقي بخصم 25% - خدمة متميزة من الفك والتغليف حتى التركيب</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/12.jpg" alt="العجوزة" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">خصم 25% عفش العجوزة الآن</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش العجوزة بخصم 25% - فريق محترف وسيارات مجهزة لنقل آمن وسريع</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/12.jpg" alt="العجوزة" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">خصم 25% عفش العجوزة الآن</h3><p class="text-gray-600 mb-4">نقل عفش العجوزة بخصم 25% - فريق محترف وسيارات مجهزة لنقل آمن وسريع</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/120008750_175324220795634_4234302949487716833_n.jpg" alt="شيراتون" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">نقل شيراتون بخصم فوري</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش شيراتون بخصم 25% - خدمة متكاملة من الفك والتغليف حتى التركيب</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/120008750_175324220795634_4234302949487716833_n.jpg" alt="شيراتون" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">نقل شيراتون بخصم فوري</h3><p class="text-gray-600 mb-4">نقل عفش شيراتون بخصم 25% - خدمة متكاملة من الفك والتغليف حتى التركيب</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/120194961_1757680647713777_2444040034988955855_n.jpg" alt="النزهة" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">خصم 25% في النزهة الآن</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش النزهة بخصم 25% - خدمة احترافية متكاملة مع ضمان سلامة المنقولات</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/120194961_1757680647713777_2444040034988955855_n.jpg" alt="النزهة" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">خصم 25% في النزهة الآن</h3><p class="text-gray-600 mb-4">نقل عفش النزهة بخصم 25% - خدمة احترافية متكاملة مع ضمان سلامة المنقولات</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/09-small.jpg" alt="جسر السويس" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">أرخص نقل بجسر السويس</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش جسر السويس بأسعار تنافسية وخصم 25% - جودة عالية وسرعة في التنفيذ</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/09-small.jpg" alt="جسر السويس" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">أرخص نقل بجسر السويس</h3><p class="text-gray-600 mb-4">نقل عفش جسر السويس بأسعار تنافسية وخصم 25% - جودة عالية وسرعة في التنفيذ</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
-                
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
-                    <div class="discount-badge">25%</div>
-                    <div class="overflow-hidden h-48">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1-1.jpg" alt="المقطم" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">شركة المقطم بخصم 25%</h3>
-                        <p class="text-gray-600 mb-4">نقل عفش المقطم بخصم 25% - فريق محترف وسيارات مجهزة لنقل آمن وسريع</p>
-                        <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل الآن
-                        </a>
-                    </div>
+                    <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1-1.jpg" alt="المقطم" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">شركة المقطم بخصم 25%</h3><p class="text-gray-600 mb-4">نقل عفش المقطم بخصم 25% - فريق محترف وسيارات مجهزة لنقل آمن وسريع</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
             </div>
         </div>
-        
         <div class="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
         <div class="absolute bottom-0 right-0 w-80 h-80 bg-blue-100 rounded-full opacity-20 translate-x-1/3 translate-y-1/3"></div>
     </section>
@@ -1159,74 +591,25 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">خدماتنا <span class="text-blue-700">المتميزة</span></h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">نقدم مجموعة متنوعة من خدمات النقل المتخصصة لتلبية احتياجاتك المختلفة</p>
             </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="service-box bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-blue-700 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white service-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6 relative z-10">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">فك وتركيب الأثاث</h3>
-                        <p class="text-gray-600">فك وتركيب جميع أنواع الأثاث المنزلي والمكتبي بواسطة فنيين متخصصين</p>
-                        <a href="#" class="mt-4 inline-block text-blue-700 font-medium hover:text-blue-800 transition-all group open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل للاستفسار
-                            <span class="inline-block transition-transform group-hover:translate-x-[-5px]">←</span>
-                        </a>
-                    </div>
+                 <div class="service-box bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-lg">
+                    <div class="bg-blue-700 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white service-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg></div>
+                    <div class="p-6 relative z-10"><h3 class="text-xl font-bold text-gray-800 mb-2">فك وتركيب الأثاث</h3><p class="text-gray-600">فك وتركيب جميع أنواع الأثاث المنزلي والمكتبي بواسطة فنيين متخصصين</p><a href="#" class="mt-4 inline-block text-blue-700 font-medium hover:text-blue-800 transition-all group open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل للاستفسار<span class="inline-block transition-transform group-hover:translate-x-[-5px]">←</span></a></div>
                 </div>
-                
                 <div class="service-box bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-blue-700 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white service-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6 relative z-10">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">تغليف الأثاث</h3>
-                        <p class="text-gray-600">تغليف احترافي للأثاث والأجهزة الكهربائية بأفضل مواد التغليف لضمان سلامتها</p>
-                        <a href="#" class="mt-4 inline-block text-blue-700 font-medium hover:text-blue-800 transition-all group open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل للاستفسار
-                            <span class="inline-block transition-transform group-hover:translate-x-[-5px]">←</span>
-                        </a>
-                    </div>
+                    <div class="bg-blue-700 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white service-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg></div>
+                    <div class="p-6 relative z-10"><h3 class="text-xl font-bold text-gray-800 mb-2">تغليف الأثاث</h3><p class="text-gray-600">تغليف احترافي للأثاث والأجهزة الكهربائية بأفضل مواد التغليف لضمان سلامتها</p><a href="#" class="mt-4 inline-block text-blue-700 font-medium hover:text-blue-800 transition-all group open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل للاستفسار<span class="inline-block transition-transform group-hover:translate-x-[-5px]">←</span></a></div>
                 </div>
-                
                 <div class="service-box bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-blue-700 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white service-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6 relative z-10">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">نقل الأثاث</h3>
-                        <p class="text-gray-600">نقل الأثاث بسيارات مجهزة ومؤمنة مع فريق عمل محترف لضمان وصول الأثاث بأمان</p>
-                        <a href="#" class="mt-4 inline-block text-blue-700 font-medium hover:text-blue-800 transition-all group open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل للاستفسار
-                            <span class="inline-block transition-transform group-hover:translate-x-[-5px]">←</span>
-                        </a>
-                    </div>
+                    <div class="bg-blue-700 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white service-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg></div>
+                    <div class="p-6 relative z-10"><h3 class="text-xl font-bold text-gray-800 mb-2">نقل الأثاث</h3><p class="text-gray-600">نقل الأثاث بسيارات مجهزة ومؤمنة مع فريق عمل محترف لضمان وصول الأثاث بأمان</p><a href="#" class="mt-4 inline-block text-blue-700 font-medium hover:text-blue-800 transition-all group open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل للاستفسار<span class="inline-block transition-transform group-hover:translate-x-[-5px]">←</span></a></div>
                 </div>
-                
                 <div class="service-box bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-blue-700 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white service-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6 relative z-10">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">تخزين الأثاث</h3>
-                        <p class="text-gray-600">خدمات تخزين آمنة للأثاث في مستودعات مؤمنة ومجهزة بأحدث أنظمة الحماية</p>
-                        <a href="#" class="mt-4 inline-block text-blue-700 font-medium hover:text-blue-800 transition-all group open-call-modal" data-phone="01096296216">
-                            <i class="fas fa-phone-alt ml-1"></i>اتصل للاستفسار
-                            <span class="inline-block transition-transform group-hover:translate-x-[-5px]">←</span>
-                        </a>
-                    </div>
+                    <div class="bg-blue-700 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white service-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg></div>
+                    <div class="p-6 relative z-10"><h3 class="text-xl font-bold text-gray-800 mb-2">تخزين الأثاث</h3><p class="text-gray-600">خدمات تخزين آمنة للأثاث في مستودعات مؤمنة ومجهزة بأحدث أنظمة الحماية</p><a href="#" class="mt-4 inline-block text-blue-700 font-medium hover:text-blue-800 transition-all group open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل للاستفسار<span class="inline-block transition-transform group-hover:translate-x-[-5px]">←</span></a></div>
                 </div>
             </div>
         </div>
-        
         <div class="absolute top-1/2 left-0 w-96 h-96 bg-blue-100 rounded-full opacity-30 -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
         <div class="absolute bottom-0 right-0 w-64 h-64 bg-green-100 rounded-full opacity-30 translate-x-1/3 translate-y-1/3 blur-2xl"></div>
     </section>
@@ -1237,88 +620,38 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">لماذا <span class="text-green-600">اختارنا</span>؟</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">نحن نقدم خدمات نقل متميزة تجمع بين الاحترافية والكفاءة والأسعار التنافسية</p>
             </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="feature-card bg-white rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-blue-700 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">سرعة في التنفيذ</h3>
-                        <p class="text-gray-600">نلتزم بالمواعيد المحددة ونقدم خدماتنا بأقصى سرعة ممكنة مع الحفاظ على الجودة</p>
-                    </div>
+                    <div class="bg-blue-700 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-gray-800 mb-2">سرعة في التنفيذ</h3><p class="text-gray-600">نلتزم بالمواعيد المحددة ونقدم خدماتنا بأقصى سرعة ممكنة مع الحفاظ على الجودة</p></div>
                 </div>
-                
                 <div class="feature-card bg-white rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-green-600 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">أمان وموثوقية</h3>
-                        <p class="text-gray-600">نتعامل مع ممتلكاتك بعناية فائقة ونستخدم أفضل مواد التغليف لضمان سلامتها</p>
-                    </div>
+                    <div class="bg-green-600 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-gray-800 mb-2">أمان وموثوقية</h3><p class="text-gray-600">نتعامل مع ممتلكاتك بعناية فائقة ونستخدم أفضل مواد التغليف لضمان سلامتها</p></div>
                 </div>
-                
                 <div class="feature-card bg-white rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-blue-700 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">خصم 25% على جميع الخدمات</h3>
-                        <p class="text-gray-600">نقدم خصم 25% على جميع خدمات النقل في كافة مناطق القاهرة الكبرى لفترة محدودة</p>
-                    </div>
+                    <div class="bg-blue-700 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-gray-800 mb-2">خصم 25% على جميع الخدمات</h3><p class="text-gray-600">نقدم خصم 25% على جميع خدمات النقل في كافة مناطق القاهرة الكبرى لفترة محدودة</p></div>
                 </div>
-                
                 <div class="feature-card bg-white rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-green-600 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">فريق محترف</h3>
-                        <p class="text-gray-600">يتكون فريقنا من محترفين ذوي خبرة طويلة في مجال النقل والفك والتركيب</p>
-                    </div>
+                    <div class="bg-green-600 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-gray-800 mb-2">فريق محترف</h3><p class="text-gray-600">يتكون فريقنا من محترفين ذوي خبرة طويلة في مجال النقل والفك والتركيب</p></div>
                 </div>
-                
                 <div class="feature-card bg-white rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-blue-700 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">خدمة متكاملة</h3>
-                        <p class="text-gray-600">نقدم خدمات الفك والتركيب والتغليف والنقل والتخزين في مكان واحد</p>
-                    </div>
+                    <div class="bg-blue-700 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-gray-800 mb-2">خدمة متكاملة</h3><p class="text-gray-600">نقدم خدمات الفك والتركيب والتغليف والنقل والتخزين في مكان واحد</p></div>
                 </div>
-                
                 <div class="feature-card bg-white rounded-xl overflow-hidden shadow-lg">
-                    <div class="bg-green-600 p-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">دعم على مدار الساعة</h3>
-                        <p class="text-gray-600">فريق خدمة العملاء متاح للرد على استفساراتكم وطلباتكم على مدار 24 ساعة</p>
-                    </div>
+                    <div class="bg-green-600 p-6 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-gray-800 mb-2">دعم على مدار الساعة</h3><p class="text-gray-600">فريق خدمة العملاء متاح للرد على استفساراتكم وطلباتكم على مدار 24 ساعة</p></div>
                 </div>
             </div>
-            
             <div class="mt-12 text-center">
                 <a href="#" class="bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition text-center btn-hover inline-block open-call-modal" data-phone="01096296216">
                     <i class="fas fa-phone-alt ml-2"></i>اتصل بنا الآن: 01096296216
                 </a>
             </div>
         </div>
-        
         <div class="absolute top-1/2 left-0 w-96 h-96 bg-blue-100 rounded-full opacity-30 -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
         <div class="absolute bottom-0 right-0 w-64 h-64 bg-green-100 rounded-full opacity-30 translate-x-1/3 translate-y-1/3 blur-2xl"></div>
     </section>
@@ -1331,82 +664,18 @@
                     <p class="text-center text-gray-600 mb-6">احصل على خصم 25% عند طلب الخدمة الآن</p>
                     <form id="quote-form">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div class="form-group">
-                                <label for="name" class="block text-gray-700 font-medium mb-2">الاسم الكامل</label>
-                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="أدخل اسمك الكامل">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="block text-gray-700 font-medium mb-2">رقم الهاتف</label>
-                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="أدخل رقم هاتفك">
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="block text-gray-700 font-medium mb-2">البريد الإلكتروني</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="أدخل بريدك الإلكتروني">
-                            </div>
-                            <div class="form-group">
-                                <label for="service" class="block text-gray-700 font-medium mb-2">نوع الخدمة</label>
-                                <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                                    <option value="">اختر نوع الخدمة</option>
-                                    <option value="residential">نقل أثاث منزلي</option>
-                                    <option value="commercial">نقل مكاتب وشركات</option>
-                                    <option value="storage">تخزين أثاث</option>
-                                    <option value="packing">خدمة التغليف فقط</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="from" class="block text-gray-700 font-medium mb-2">موقع النقل من</label>
-                                <select id="from" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                                    <option value="">اختر المنطقة</option>
-                                    <option value="nasr-city">مدينة نصر</option>
-                                    <option value="heliopolis">مصر الجديدة</option>
-                                    <option value="tagamoa">التجمع الخامس</option>
-                                    <option value="madinaty">مدينتي</option>
-                                    <option value="rehab">الرحاب</option>
-                                    <option value="zayed">الشيخ زايد</option>
-                                    <option value="maadi">المعادي</option>
-                                    <option value="helwan">حلوان</option>
-                                    <option value="mohandessin">المهندسين</option>
-                                    <option value="dokki">الدقي</option>
-                                    <option value="agouza">العجوزة</option>
-                                    <option value="sheraton">شيراتون</option>
-                                    <option value="nozha">النزهة</option>
-                                    <option value="gesr">جسر السويس</option>
-                                    <option value="mokattam">المقطم</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="to" class="block text-gray-700 font-medium mb-2">موقع النقل إلى</label>
-                                <select id="to" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                                    <option value="">اختر المنطقة</option>
-                                    <option value="nasr-city">مدينة نصر</option>
-                                    <option value="heliopolis">مصر الجديدة</option>
-                                    <option value="tagamoa">التجمع الخامس</option>
-                                    <option value="madinaty">مدينتي</option>
-                                    <option value="rehab">الرحاب</option>
-                                    <option value="zayed">الشيخ زايد</option>
-                                    <option value="maadi">المعادي</option>
-                                    <option value="helwan">حلوان</option>
-                                    <option value="mohandessin">المهندسين</option>
-                                    <option value="dokki">الدقي</option>
-                                    <option value="agouza">العجوزة</option>
-                                    <option value="sheraton">شيراتون</option>
-                                    <option value="nozha">النزهة</option>
-                                    <option value="gesr">جسر السويس</option>
-                                    <option value="mokattam">المقطم</option>
-                                </select>
-                            </div>
-                            <div class="md:col-span-2 form-group">
-                                <label for="message" class="block text-gray-700 font-medium mb-2">تفاصيل إضافية</label>
-                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="أدخل أي تفاصيل إضافية تود إخبارنا بها"></textarea>
-                            </div>
+                            <div class="form-group"><label for="name" class="block text-gray-700 font-medium mb-2">الاسم الكامل</label><input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="أدخل اسمك الكامل"></div>
+                            <div class="form-group"><label for="phone" class="block text-gray-700 font-medium mb-2">رقم الهاتف</label><input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="أدخل رقم هاتفك"></div>
+                            <div class="form-group"><label for="email" class="block text-gray-700 font-medium mb-2">البريد الإلكتروني</label><input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="أدخل بريدك الإلكتروني"></div>
+                            <div class="form-group"><label for="service" class="block text-gray-700 font-medium mb-2">نوع الخدمة</label><select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"><option value="">اختر نوع الخدمة</option><option value="residential">نقل أثاث منزلي</option><option value="commercial">نقل مكاتب وشركات</option><option value="storage">تخزين أثاث</option><option value="packing">خدمة التغليف فقط</option></select></div>
+                            <div class="form-group"><label for="from" class="block text-gray-700 font-medium mb-2">موقع النقل من</label><select id="from" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"><option value="">اختر المنطقة</option><option value="nasr-city">مدينة نصر</option><option value="heliopolis">مصر الجديدة</option><option value="tagamoa">التجمع الخامس</option><option value="madinaty">مدينتي</option><option value="rehab">الرحاب</option><option value="zayed">الشيخ زايد</option><option value="maadi">المعادي</option><option value="helwan">حلوان</option><option value="mohandessin">المهندسين</option><option value="dokki">الدقي</option><option value="agouza">العجوزة</option><option value="sheraton">شيراتون</option><option value="nozha">النزهة</option><option value="gesr">جسر السويس</option><option value="mokattam">المقطم</option></select></div>
+                            <div class="form-group"><label for="to" class="block text-gray-700 font-medium mb-2">موقع النقل إلى</label><select id="to" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"><option value="">اختر المنطقة</option><option value="nasr-city">مدينة نصر</option><option value="heliopolis">مصر الجديدة</option><option value="tagamoa">التجمع الخامس</option><option value="madinaty">مدينتي</option><option value="rehab">الرحاب</option><option value="zayed">الشيخ زايد</option><option value="maadi">المعادي</option><option value="helwan">حلوان</option><option value="mohandessin">المهندسين</option><option value="dokki">الدقي</option><option value="agouza">العجوزة</option><option value="sheraton">شيراتون</option><option value="nozha">النزهة</option><option value="gesr">جسر السويس</option><option value="mokattam">المقطم</option></select></div>
+                            <div class="md:col-span-2 form-group"><label for="message" class="block text-gray-700 font-medium mb-2">تفاصيل إضافية</label><textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="أدخل أي تفاصيل إضافية تود إخبارنا بها"></textarea></div>
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition btn-hover">احصل على خصم 25% الآن</button>
-                        </div>
+                        <div class="text-center"><button type="submit" class="bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition btn-hover">احصل على خصم 25% الآن</button></div>
                     </form>
                 </div>
             </div>
-            
             <div class="mt-8 text-center">
                 <p class="text-white text-xl mb-4">أو يمكنك الاتصال بنا مباشرة للحصول على خدمة فورية</p>
                 <a href="#" class="bg-white text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition text-center btn-hover inline-block open-call-modal" data-phone="01096296216">
@@ -1414,15 +683,7 @@
                 </a>
             </div>
         </div>
-        
-        <div class="absolute top-0 left-0 w-full h-full">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute top-0 left-0 opacity-10">
-                <path fill="#ffffff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute bottom-0 left-0 opacity-10">
-                <path fill="#ffffff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,122.7C960,139,1056,149,1152,138.7C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </div>
+        <div class="absolute top-0 left-0 w-full h-full"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute top-0 left-0 opacity-10"><path fill="#ffffff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute bottom-0 left-0 opacity-10"><path fill="#ffffff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,122.7C960,139,1056,149,1152,138.7C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg></div>
     </section>
 
     <section id="blog" class="py-20 bg-white relative overflow-hidden">
@@ -1433,37 +694,16 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="overflow-hidden h-64">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/blog1.jpg" alt="نصائح تغليف الأثاث" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-sm text-blue-700 font-medium">نصائح</span>
-                        <h3 class="text-xl font-bold text-gray-800 my-2">أفضل الطرق لتغليف الأثاث قبل النقل</h3>
-                        <p class="text-gray-600 mb-4">تعرف على أفضل المواد والتقنيات المستخدمة في تغليف الأثاث لضمان حمايته أثناء النقل.</p>
-                        <a href="#" class="text-green-600 font-medium hover:text-green-700 transition-all">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
-                    </div>
+                    <div class="overflow-hidden h-64"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/blog1.jpg" alt="نصائح تغليف الأثاث" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><span class="text-sm text-blue-700 font-medium">نصائح</span><h3 class="text-xl font-bold text-gray-800 my-2">أفضل الطرق لتغليف الأثاث قبل النقل</h3><p class="text-gray-600 mb-4">تعرف على أفضل المواد والتقنيات المستخدمة في تغليف الأثاث لضمان حمايته أثناء النقل.</p><a href="#" class="text-green-600 font-medium hover:text-green-700 transition-all">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a></div>
                 </div>
                 <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="overflow-hidden h-64">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/blog2.jpg" alt="اختيار شركة نقل" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-sm text-blue-700 font-medium">إرشادات</span>
-                        <h3 class="text-xl font-bold text-gray-800 my-2">كيف تختار شركة نقل الأثاث المناسبة؟</h3>
-                        <p class="text-gray-600 mb-4">معايير هامة يجب مراعاتها عند اختيار شركة نقل الأثاث لضمان خدمة موثوقة وآمنة.</p>
-                        <a href="#" class="text-green-600 font-medium hover:text-green-700 transition-all">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
-                    </div>
+                    <div class="overflow-hidden h-64"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/blog2.jpg" alt="اختيار شركة نقل" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><span class="text-sm text-blue-700 font-medium">إرشادات</span><h3 class="text-xl font-bold text-gray-800 my-2">كيف تختار شركة نقل الأثاث المناسبة؟</h3><p class="text-gray-600 mb-4">معايير هامة يجب مراعاتها عند اختيار شركة نقل الأثاث لضمان خدمة موثوقة وآمنة.</p><a href="#" class="text-green-600 font-medium hover:text-green-700 transition-all">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a></div>
                 </div>
                 <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="overflow-hidden h-64">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/blog3.jpg" alt="تجهيزات يوم النقل" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-sm text-blue-700 font-medium">تحضيرات</span>
-                        <h3 class="text-xl font-bold text-gray-800 my-2">قائمة مهام أساسية ليوم النقل</h3>
-                        <p class="text-gray-600 mb-4">استعد ليوم النقل بشكل منظم من خلال قائمة المهام هذه لتجنب أي مفاجآت غير سارة.</p>
-                        <a href="#" class="text-green-600 font-medium hover:text-green-700 transition-all">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
-                    </div>
+                    <div class="overflow-hidden h-64"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/blog3.jpg" alt="تجهيزات يوم النقل" class="w-full h-full object-cover"></div>
+                    <div class="p-6"><span class="text-sm text-blue-700 font-medium">تحضيرات</span><h3 class="text-xl font-bold text-gray-800 my-2">قائمة مهام أساسية ليوم النقل</h3><p class="text-gray-600 mb-4">استعد ليوم النقل بشكل منظم من خلال قائمة المهام هذه لتجنب أي مفاجآت غير سارة.</p><a href="#" class="text-green-600 font-medium hover:text-green-700 transition-all">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a></div>
                 </div>
             </div>
         </div>
@@ -1474,63 +714,45 @@
     <footer class="bg-blue-800 text-white py-12">
         <div class="container mx-auto px-4 md:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h4 class="text-xl font-bold mb-4">نقل عفش القاهرة</h4>
-                    <p class="text-sm opacity-90">نقدم خدمات نقل عفش احترافية في جميع أنحاء القاهرة الكبرى بأسعار تنافسية وجودة عالية.</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">روابط سريعة</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#services" class="text-sm hover:text-gray-200 transition-all">خدماتنا</a></li>
-                        <li><a href="#locations" class="text-sm hover:text-gray-200 transition-all">مناطق الخدمة</a></li>
-                        <li><a href="#about" class="text-sm hover:text-gray-200 transition-all">من نحن</a></li>
-                        <li><a href="#blog" class="text-sm hover:text-gray-200 transition-all">المدونة</a></li>
-                        <li><a href="#contact" class="text-sm hover:text-gray-200 transition-all">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">تواصل معنا</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><i class="fas fa-phone-alt ml-2"></i>01096296216</li>
-                        <li><i class="fas fa-envelope ml-2"></i>info@naqlafesh.com</li>
-                        <li><i class="fas fa-map-marker-alt ml-2"></i>القاهرة، مصر</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">تابعنا</h4>
-                    <div class="flex space-x-4 space-x-reverse">
-                        <a href="#" class="text-white hover:text-gray-200 transition-all text-2xl"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white hover:text-gray-200 transition-all text-2xl"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white hover:text-gray-200 transition-all text-2xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white hover:text-gray-200 transition-all text-2xl"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+                <div><h4 class="text-xl font-bold mb-4">نقل عفش القاهرة</h4><p class="text-sm opacity-90">نقدم خدمات نقل عفش احترافية في جميع أنحاء القاهرة الكبرى بأسعار تنافسية وجودة عالية.</p></div>
+                <div><h4 class="text-xl font-bold mb-4">روابط سريعة</h4><ul class="space-y-2"><li><a href="#services" class="text-sm hover:text-gray-200 transition-all">خدماتنا</a></li><li><a href="#locations" class="text-sm hover:text-gray-200 transition-all">مناطق الخدمة</a></li><li><a href="#about" class="text-sm hover:text-gray-200 transition-all">من نحن</a></li><li><a href="#blog" class="text-sm hover:text-gray-200 transition-all">المدونة</a></li><li><a href="#contact" class="text-sm hover:text-gray-200 transition-all">اتصل بنا</a></li></ul></div>
+                <div><h4 class="text-xl font-bold mb-4">تواصل معنا</h4><ul class="space-y-2 text-sm"><li><i class="fas fa-phone-alt ml-2"></i>01096296216</li><li><i class="fas fa-envelope ml-2"></i>info@naqlafesh.com</li><li><i class="fas fa-map-marker-alt ml-2"></i>القاهرة، مصر</li></ul></div>
+                <div><h4 class="text-xl font-bold mb-4">تابعنا</h4><div class="flex space-x-4 space-x-reverse"><a href="#" class="text-white hover:text-gray-200 transition-all text-2xl"><i class="fab fa-facebook-f"></i></a><a href="#" class="text-white hover:text-gray-200 transition-all text-2xl"><i class="fab fa-twitter"></i></a><a href="#" class="text-white hover:text-gray-200 transition-all text-2xl"><i class="fab fa-instagram"></i></a><a href="#" class="text-white hover:text-gray-200 transition-all text-2xl"><i class="fab fa-linkedin-in"></i></a></div></div>
             </div>
-            <div class="border-t border-blue-700 pt-8 text-center text-sm opacity-90">
-                <p>© 2024 جميع الحقوق محفوظة. شركة نقل عفش القاهرة.</p>
-            </div>
+            <div class="border-t border-blue-700 pt-8 text-center text-sm opacity-90"><p>© 2024 جميع الحقوق محفوظة. شركة نقل عفش القاهرة.</p></div>
         </div>
     </footer>
 
-    <div id="callConfirmationModal" class="call-modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1001] hidden">
-        <div class="call-modal-content bg-white p-6 md:p-8 rounded-lg shadow-xl max-w-md w-11/12 md:w-full text-center">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">تأكيد الاتصال</h2>
-            <p class="text-gray-700 mb-6">نحن هنا لمساعدتك في نقل أثاثك. لضمان تقديم أفضل خدمة، يرجى تأكيد جديتك في طلب الخدمة قبل الاتصال.</p>
-            <div class="mb-6 text-right">
-                <label for="confirmIntentCheckbox" class="flex items-center text-gray-700 cursor-pointer">
-                    <input type="checkbox" id="confirmIntentCheckbox" class="ml-2 h-5 w-5 text-green-600 border-gray-300 rounded focus:ring-green-500">
-                    <span>أؤكد أنني بحاجة فعلية لخدمات نقل العفش وأرغب في الاتصال.</span>
-                </label>
+    <div id="universalCallModalOverlay" class="call-modal-overlay hidden"> <div class="call-modal-content bg-white p-6 md:p-8 rounded-lg shadow-xl max-w-md w-11/12 md:w-full"> <div id="universalInitialQuestion">
+                <p class="text-lg font-semibold text-gray-800 mb-3 text-center">جميع خدمات نقل العفش</p>
+                <p class="text-gray-700 mb-4 text-sm text-center">لو ناوي تنقل عفشك بجد، يلا كلمنا دلوقتي</p>
+                <div class="flex justify-around">
+                    <button id="universalConfirmCallBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm transition duration-300">نعم، أريد الاتصال</button>
+                    <button id="universalCancelCallBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg text-sm transition duration-300">لا، أتصفح فقط</button>
+                </div>
             </div>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button id="proceedCallButton" class="bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto" disabled>
-                    <i class="fas fa-phone-alt ml-2"></i>نعم، اتصل الآن
-                </button>
-                <button id="cancelCallButton" class="bg-gray-200 text-gray-700 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition w-full sm:w-auto">
-                    إلغاء
-                </button>
+            <div id="universalCallAction" class="hidden text-center">
+                <p class="text-lg font-semibold text-gray-800 mb-3">اتصل بنا مباشرة!</p>
+                <a href="tel:01096296216" id="universalDirectCallLink" class="block w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg transition duration-300 font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="vertical-align: middle;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    01096296216
+                </a>
+                <button id="universalCloseModalFinal" class="mt-3 text-sm text-gray-500 hover:text-gray-700">إغلاق</button>
             </div>
         </div>
+    </div>
+    
+    <div id="fabCallModal" class="call-modal-overlay hidden"> <div class="call-modal-content bg-white p-6 rounded-lg shadow-xl max-w-xs w-11/12 text-center"> <p class="text-lg font-semibold text-gray-800 mb-4">اتصل بنا مباشرة!</p>
+            <a href="tel:01096296216" id="fabDirectCallLink" class="block w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg transition duration-300 font-bold mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2 align-middle" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                01096296216
+            </a>
+            <button id="fabCloseModalBtn" class="text-sm text-gray-500 hover:text-gray-700 mt-2">إغلاق</button>
+         </div>
     </div>
 
 
@@ -1541,7 +763,7 @@
         if (menuToggle && mobileMenu) {
             menuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
-                mobileMenu.classList.toggle('animate__fadeIn');
+                mobileMenu.classList.toggle('animate__fadeIn'); // Ensure animate.css classes are toggled if used for appearance
             });
         }
 
@@ -1557,55 +779,11 @@
           }
         }
 
-        // Call Confirmation Modal Logic
-        const callConfirmationModal = document.getElementById('callConfirmationModal');
-        const openCallModalButtons = document.querySelectorAll('.open-call-modal');
-        const proceedCallButton = document.getElementById('proceedCallButton');
-        const cancelCallButton = document.getElementById('cancelCallButton');
-        const confirmIntentCheckbox = document.getElementById('confirmIntentCheckbox');
-        let currentPhoneNumber = '';
-
-        if (callConfirmationModal && proceedCallButton && cancelCallButton && confirmIntentCheckbox) {
-            openCallModalButtons.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    currentPhoneNumber = button.dataset.phone;
-                    confirmIntentCheckbox.checked = false; // Reset checkbox
-                    proceedCallButton.disabled = true; // Reset button state
-                    callConfirmationModal.classList.remove('hidden');
-                });
-            });
-
-            cancelCallButton.addEventListener('click', () => {
-                callConfirmationModal.classList.add('hidden');
-            });
-
-            // Close modal if clicked outside content
-            callConfirmationModal.addEventListener('click', (event) => {
-                if (event.target === callConfirmationModal) {
-                    callConfirmationModal.classList.add('hidden');
-                }
-            });
-
-
-            confirmIntentCheckbox.addEventListener('change', () => {
-                proceedCallButton.disabled = !confirmIntentCheckbox.checked;
-            });
-
-            proceedCallButton.addEventListener('click', () => {
-                if (confirmIntentCheckbox.checked && currentPhoneNumber) {
-                    window.location.href = 'tel:' + currentPhoneNumber;
-                    callConfirmationModal.classList.add('hidden');
-                }
-            });
-        }
-
         // Quote Form Submission (Example, replace with actual submission logic)
         const quoteForm = document.getElementById('quote-form');
         if (quoteForm) {
             quoteForm.addEventListener('submit', function(event) {
                 event.preventDefault();
-                // Basic validation
                 const name = document.getElementById('name').value;
                 const phone = document.getElementById('phone').value;
                 const service = document.getElementById('service').value;
@@ -1613,25 +791,110 @@
                 const toLocation = document.getElementById('to').value;
 
                 if (!name || !phone || !service || !fromLocation || !toLocation) {
-                    // In a real app, show a more user-friendly message
                     console.error("الرجاء ملء جميع الحقول المطلوبة.");
-                    // For now, let's just log it. You'd typically show an error message on the UI.
-                    // Example: display a message in a div with id="form-message"
-                    // const formMessage = document.getElementById('form-message');
-                    // if(formMessage) formMessage.textContent = "الرجاء ملء جميع الحقول المطلوبة.";
+                    // Add user-friendly error display here if desired
                     return;
                 }
                 
-                // Add your form submission logic here (e.g., send data to a server)
                 console.log('Form submitted with:', {
                     name, phone, email: document.getElementById('email').value, service, from: fromLocation, to: toLocation, message: document.getElementById('message').value
                 });
-                // Optionally, show a success message or redirect
-                // Example:
-                // if(formMessage) formMessage.textContent = "تم إرسال طلبك بنجاح! سنقوم بالاتصال بك قريباً.";
-                quoteForm.reset(); // Reset the form
+                // Add success message or redirect here
+                quoteForm.reset();
+            });
+        }
+
+        // --- New Modal Logic ---
+
+        // Universal Call Modal Elements
+        const universalCallModalOverlay = document.getElementById('universalCallModalOverlay');
+        const universalInitialQuestion = document.getElementById('universalInitialQuestion');
+        const universalCallAction = document.getElementById('universalCallAction');
+        const universalConfirmCallBtn = document.getElementById('universalConfirmCallBtn');
+        const universalCancelCallBtn = document.getElementById('universalCancelCallBtn');
+        const universalDirectCallLink = document.getElementById('universalDirectCallLink'); // Phone number is hardcoded in HTML
+        const universalCloseModalFinal = document.getElementById('universalCloseModalFinal');
+        const openCallModalButtons = document.querySelectorAll('.open-call-modal'); // These are existing buttons on the page
+
+        // FAB Specific Modal Elements
+        const fabButton = document.getElementById('fab');
+        const fabCallModal = document.getElementById('fabCallModal');
+        const fabCloseModalBtn = document.getElementById('fabCloseModalBtn');
+        const fabDirectCallLink = document.getElementById('fabDirectCallLink'); // Phone number is hardcoded in HTML
+
+
+        // Function to open a modal
+        function openModal(modalElement) {
+            if (modalElement) {
+                modalElement.classList.remove('hidden');
+                // Optional: Add a class to body to prevent scrolling
+                // document.body.classList.add('overflow-hidden'); 
+            }
+        }
+
+        // Function to close a modal
+        function closeModal(modalElement) {
+            if (modalElement) {
+                modalElement.classList.add('hidden');
+                // Optional: Remove class from body
+                // document.body.classList.remove('overflow-hidden');
+            }
+        }
+        
+        // Event Listeners for Universal Call Modal
+        if (universalCallModalOverlay && universalConfirmCallBtn && universalCancelCallBtn && universalCloseModalFinal) {
+            openCallModalButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    // const phoneNumber = button.dataset.phone; // Old way, new modal has hardcoded number
+                    // universalDirectCallLink.href = 'tel:' + phoneNumber; // Not needed if number is hardcoded
+                    
+                    universalInitialQuestion.classList.remove('hidden');
+                    universalCallAction.classList.add('hidden');
+                    openModal(universalCallModalOverlay);
+                });
+            });
+
+            universalConfirmCallBtn.addEventListener('click', () => {
+                universalInitialQuestion.classList.add('hidden');
+                universalCallAction.classList.remove('hidden');
+            });
+
+            universalCancelCallBtn.addEventListener('click', () => {
+                closeModal(universalCallModalOverlay);
+            });
+
+            universalCloseModalFinal.addEventListener('click', () => {
+                closeModal(universalCallModalOverlay);
+            });
+
+            // Close universal modal if overlay is clicked
+            universalCallModalOverlay.addEventListener('click', (event) => {
+                if (event.target === universalCallModalOverlay) {
+                    closeModal(universalCallModalOverlay);
+                }
+            });
+        }
+
+
+        // Event Listeners for FAB Specific Modal
+        if (fabButton && fabCallModal && fabCloseModalBtn) {
+            fabButton.addEventListener('click', () => {
+                openModal(fabCallModal);
+            });
+
+            fabCloseModalBtn.addEventListener('click', () => {
+                closeModal(fabCallModal);
+            });
+
+            // Close FAB modal if overlay is clicked
+            fabCallModal.addEventListener('click', (event) => {
+                if (event.target === fabCallModal) {
+                    closeModal(fabCallModal);
+                }
             });
         }
 
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML=" window.__cf$cv$params={r:'93d1467985be1e71',t:'MTc0Njc5NDUzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+</body>
+</html>
