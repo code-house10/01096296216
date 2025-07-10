@@ -420,6 +420,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              font-family: 'Tajawal', sans-serif;
         }
 
+        /* Styles for the video hero section */
+        .video-hero {
+            position: relative;
+            width: 100%;
+            height: 85vh; /* Adjust height as needed */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000; /* Fallback background */
+        }
+
+        .video-hero iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw; /* Make it wider than viewport to cover */
+            height: 100vh; /* Make it taller than viewport to cover */
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            pointer-events: none; /* Allows clicks to pass through to elements below if needed */
+        }
+
+        .video-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+            z-index: 1;
+        }
+
+        .video-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .discount-circle {
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #FF4B2B, #FF416C); /* Vibrant gradient */
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 3; /* Above overlay */
+            animation: pulse 2s infinite; /* Keep the pulse animation */
+            border: 3px solid white; /* White border for emphasis */
+        }
+
+        .discount-circle span {
+            font-size: 0.9rem;
+            margin-top: -5px;
+        }
+
+        @media (max-width: 768px) {
+            .video-hero {
+                height: 60vh; /* Adjust height for smaller screens */
+            }
+            .video-hero iframe {
+                width: 150vw; /* Adjust for mobile to ensure full cover */
+                height: 100vh;
+            }
+            .discount-circle {
+                width: 80px;
+                height: 80px;
+                font-size: 1.5rem;
+                top: 10px;
+                left: 10px;
+            }
+        }
+
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -487,18 +572,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </nav>
 
-    <section class="hero-bg h-[85vh] flex items-center relative">
-        <div class="animated-bg">
-            <span style="--i:11;"></span><span style="--i:12;"></span><span style="--i:24;"></span><span style="--i:10;"></span><span style="--i:14;"></span><span style="--i:23;"></span><span style="--i:18;"></span><span style="--i:16;"></span><span style="--i:19;"></span><span style="--i:20;"></span><span style="--i:22;"></span><span style="--i:25;"></span><span style="--i:18;"></span><span style="--i:21;"></span><span style="--i:15;"></span><span style="--i:13;"></span><span style="--i:26;"></span><span style="--i:17;"></span><span style="--i:13;"></span><span style="--i:28;"></span>
-        </div>
-        <div class="container mx-auto px-4 md:px-8 hero-content">
+    <!-- New Hero Section with Video -->
+    <section class="video-hero">
+        <div class="video-hero-overlay"></div>
+        <!-- YouTube Video Embed -->
+        <iframe
+            src="https://www.youtube.com/embed/NdlkTV24tBs?autoplay=1&mute=1&loop=1&playlist=NdlkTV24tBs&controls=0&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+        ></iframe>
+
+        <div class="video-hero-content container mx-auto px-4 md:px-8">
             <div class="max-w-2xl animate__animated animate__fadeInUp">
-                <div class="bg-red-600 text-white inline-block px-4 py-2 rounded-lg mb-4 animate__animated animate__pulse animate__infinite">
-                    <span class="font-bold">عرض محدود!</span> خصم 25% على جميع خدمات النقل
-                </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">نقل عفش آمن وسريع <span class="text-blue-300">في جميع أنحاء مصر</span></h1>
                 <p class="text-xl text-white mb-8">نقدم خدمات نقل عفش احترافية فى جميع انحاء مصر وبخصم 25% لفترة محدودة</p>
-                <div class="hero-buttons flex flex-row gap-4">
+                <div class="hero-buttons flex flex-row gap-4 justify-center md:justify-start">
                     <a href="#" class="hero-button bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition text-center btn-hover animate__animated animate__fadeInRight open-call-modal" data-phone="01096296216">
                         <i class="fas fa-phone-alt ml-2"></i>اتصل الآن
                     </a>
@@ -506,11 +595,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </div>
-        
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 space-x-reverse z-10">
-            <button class="nav-dot active h-3 w-8 bg-blue-600 rounded-full"></button>
-            <button class="nav-dot h-3 w-3 bg-white rounded-full"></button>
-            <button class="nav-dot h-3 w-3 bg-white rounded-full"></button>
+        <!-- 25% Discount Circle -->
+        <div class="discount-circle">
+            25%<br><span>خصم</span>
         </div>
     </section>
 
@@ -550,7 +637,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
                     <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/09-small.jpg" alt="مدينتي" class="w-full h-full object-cover"></div>
-                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">وفر 25% على نقل مدينتي</h3><p class="text-gray-600 mb-4">خدمات نقل عفش متكاملة في مدينتي بخصم 25% - فك وتركيب وتغليف ونقل بأعلى معايير الجودة</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-blue-700 mb-2">وفر 25% على نقل مدينتي</h3><p class="text-gray-600 mb-4">خدمات نقل عفش متكاملة في مدينتي بخصم 25% - فك وتركيب وتغليف بأعلى معايير الجودة</p><a href="#" class="bg-green-600 text-white py-2 px-4 rounded-full text-sm hover:bg-green-700 transition btn-hover inline-block open-call-modal" data-phone="01096296216"><i class="fas fa-phone-alt ml-1"></i>اتصل الآن</a></div>
                 </div>
                  <div class="location-card bg-white rounded-xl overflow-hidden shadow-lg relative">
                     <div class="discount-badge">25%</div><div class="overflow-hidden h-48"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1-1.jpg" alt="الرحاب" class="w-full h-full object-cover"></div>
